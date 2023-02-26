@@ -3,7 +3,7 @@ import "dotenv/config.js";
 import { ok as assert } from "node:assert";
 import { setInterval } from "node:timers";
 import { Client, Events, GatewayIntentBits, type Snowflake } from "discord.js";
-import { noop } from "./utils/common.js";
+import { noop, unwrapArrayIfSingle } from "./utils/common.js";
 import {
 	ALERTS_CHANNEL_NAME,
 	BoosterStatus,
@@ -92,7 +92,9 @@ client.on(Events.MessageCreate, async (message) => {
 	if (!has(Roles.PrimaryBooster) && has(Roles.Booster)) rolesToRemove.push(Roles.Booster);
 	if (has(Roles.SecondaryBooster)) rolesToRemove.push(Roles.SecondaryBooster);
 
-	if (rolesToRemove.length) await fetchedMember.roles.remove(rolesToRemove);
+	// We're unwrapping the array if it's a single element since it will use a different API endpoint
+	// Which is less prone to race conditions with other bots that may be modifying the members roles
+	if (rolesToRemove.length) await fetchedMember.roles.remove(unwrapArrayIfSingle(rolesToRemove));
 });
 
 await client.login();
