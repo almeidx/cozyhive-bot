@@ -34,16 +34,7 @@
 		"eslint-plugin-rxjs-angular": "npm:@almeidx/empty@1.0.1",
 		"eslint-plugin-svelte3": "npm:@almeidx/empty@1.0.1",
 		"eslint-plugin-vue": "npm:@almeidx/empty@1.0.1",
-		"vue-eslint-parser": "npm:@almeidx/empty@1.0.1",
-		"@typescript-eslint/eslint-plugin": "^5.51.0",
-		"@typescript-eslint/parser": "^5.51.0",
-		"eslint-config-prettier": "^8.6.0",
-		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-jsdoc": "^39.8.0",
-		"eslint-plugin-n": "^15.6.1",
-		"eslint-plugin-sonarjs": "^0.18.0",
-		"eslint-plugin-unicorn": "^45.0.2",
-		"discord-api-types": "0.37.34"
+		"vue-eslint-parser": "npm:@almeidx/empty@1.0.1"
 	},
 	"dependencies": {
 		"discord.js": "^14.8.0",
@@ -57,9 +48,9 @@
 		"eslint-config-neon": "^0.1.40",
 		"prettier": "^2.8.4",
 		"rimraf": "^4.4.0",
-		"typescript": "~4.9.5"
+		"typescript": "~5.0.2"
 	},
-	"packageManager": "yarn@3.4.1",
+	"packageManager": "yarn@3.5.0",
 	"prettier": {
 		"printWidth": 120,
 		"useTabs": true,
