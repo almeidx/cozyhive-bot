@@ -43,7 +43,7 @@
 	"devDependencies": {
 		"@types/node": "^18.15.11",
 		"cross-env": "^7.0.3",
-		"esbuild": "^0.17.15",
+		"esbuild": "^0.17.16",
 		"eslint": "^8.38.0",
 		"eslint-config-neon": "^0.1.41",
 		"prettier": "^2.8.7",
