@@ -41,7 +41,7 @@
 		"dotenv": "^16.0.3"
 	},
 	"devDependencies": {
-		"@types/node": "^18.15.12",
+		"@types/node": "^18.15.13",
 		"cross-env": "^7.0.3",
 		"esbuild": "^0.17.17",
 		"eslint": "^8.38.0",
