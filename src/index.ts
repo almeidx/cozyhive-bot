@@ -1,5 +1,3 @@
-import "dotenv/config.js";
-
 import { ok as assert } from "node:assert";
 import { setInterval } from "node:timers";
 import { Client, Events, GatewayIntentBits, type Snowflake } from "discord.js";
