@@ -13,6 +13,7 @@
 		"format": "prettier --write . && eslint src --ext ts --fix",
 		"lint": "prettier --check . && eslint src --ext ts",
 		"start": "node --enable-source-maps dist/index.js",
+		"start:env": "env-cmd node --enable-source-maps dist/index.js",
 		"start-dev": "pnpm build:write && env-cmd node --enable-source-maps dist/index.js"
 	},
 	"prettier": {

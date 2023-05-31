@@ -4,7 +4,7 @@
   - [Overview](#overview)
     - [Local setup](#local-setup)
       - [Cloning repository](#cloning-repository)
-      - [Running the bot](#running-the-bot)
+      - [Running the bot locally](#running-the-bot-locally)
     - [Author](#author)
 
 ---
@@ -27,9 +27,17 @@ This setup assumes you have [Git], and [Node.js] setup on your machine. This rep
 
 Note: If you don't have corepack enabled, you can do it with `corepack enable`.
 
-#### Running the bot
+#### Running the bot locally
 
-- `pnpm start-dev`
+If your environment variables are stored on the .env file, you can use:
+
+- `pnpm build`
+- `pnpm start:env`
+
+Otherwise, use:
+
+- `pnpm build`
+- `pnpm start`
 
 ---
 
