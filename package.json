@@ -5,17 +5,15 @@
 	"license": "GPL-3.0",
 	"author": "Almeida <almeidx@pm.me>",
 	"type": "module",
-	"main": "dist/index.js",
 	"scripts": {
-		"build": "yarn build:check && yarn build:write",
+		"build": "pnpm build:check && pnpm build:write",
 		"build:check": "tsc --noEmit",
 		"build:write": "rimraf dist && esbuild $(glob 'src/**/*' --nodir) --loader:.json=copy --outdir=dist --platform=node --target=node18 --format=esm --sourcemap",
-		"fmt": "yarn format",
+		"fmt": "pnpm format",
 		"format": "prettier --write . && eslint src --ext ts --fix",
 		"lint": "prettier --check . && eslint src --ext ts",
-		"start": "node --enable-source-maps .",
-		"start-dev": "yarn build:write && env-cmd node --enable-source-maps .",
-		"update": "yarn upgrade-interactive"
+		"start": "node --enable-source-maps dist/index.js",
+		"start-dev": "pnpm build:write && env-cmd node --enable-source-maps dist/index.js"
 	},
 	"prettier": {
 		"printWidth": 120,
@@ -49,7 +47,6 @@
 			]
 		},
 		"ignorePatterns": [
-			".yarn/*",
 			"dist/*",
 			"node_modules/*"
 		],
@@ -89,5 +86,5 @@
 		"rimraf": "^5.0.1",
 		"typescript": "~5.0.4"
 	},
-	"packageManager": "yarn@3.5.1"
+	"packageManager": "pnpm@8.6.0"
 }

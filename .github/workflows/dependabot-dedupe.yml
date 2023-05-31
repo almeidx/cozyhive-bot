@@ -21,17 +21,17 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          cache: yarn
+          cache: pnpm
           node-version-file: .nvmrc
 
-      - run: yarn dedupe
+      - run: pnpm dedupe
 
       - name: Commit lockfile
         run: |
           git config user.name "dependabot[bot]"
           git config user.email "49699333+dependabot[bot]@users.noreply.github.com"
           git add .
-          git commit -m 'Dedupe yarn.lock' || true
+          git commit -m '[dependabot skip] dedupe pnpm.lock' || true
           git push || true
         env:
           HUSKY: 0
