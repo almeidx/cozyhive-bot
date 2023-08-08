@@ -78,7 +78,7 @@
 	"devDependencies": {
 		"@types/node": "^20.4.8",
 		"env-cmd": "^10.1.0",
-		"esbuild": "^0.18.19",
+		"esbuild": "^0.18.20",
 		"eslint": "^8.46.0",
 		"eslint-config-neon": "^0.1.47",
 		"glob": "^10.3.3",
