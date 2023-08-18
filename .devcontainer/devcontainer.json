@@ -1,11 +1,11 @@
 {
-	"build": { "dockerfile": "Dockerfile" },
+  "build": { "dockerfile": "Dockerfile" },
 
-	"customizations": {
-		"vscode": {
-			"extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
-		}
-	},
+  "customizations": {
+    "vscode": {
+      "extensions": ["dprint.dprint"]
+    }
+  },
 
-	"onCreateCommand": "pnpm install --frozen-lockfile"
+  "onCreateCommand": "pnpm install --frozen-lockfile"
 }

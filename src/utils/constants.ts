@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/prefer-literal-enum-member */
-import type { Snowflake } from "discord.js";
+import type { Snowflake } from "@discordjs/core";
 
 export const enum Guilds {
 	Cozyhive = "493351982887862283",
@@ -33,19 +32,19 @@ export const OFFICIAL_GUILDS: Snowflake[] = [
 	Guilds.Pride,
 ];
 
-export enum Channels {
+export const enum Channels {
 	ColourRoles = "829693921079853106",
 	General = "493351982887862287",
 	NitroBoosters = "585529480001355776",
 }
 
-export enum Roles {
+export const enum Roles {
 	Booster = "678539342666530816",
 	PrimaryBooster = "585529237096628235",
 	SecondaryBooster = "678539154258264095",
 }
 
-export enum Emojis {
+export const enum Emojis {
 	NitroBoostHover = "<a:aPES_NitroBoostHover:760847016644313088>",
 }
 
@@ -53,7 +52,7 @@ export const ALERTS_CHANNEL_NAME = "alerts";
 export const NIGHTHAWK_BOT_USER_ID = "740892250820706345";
 export const USER_ID_REGEX = /User: (\d{16,20})$/;
 
-export enum BoosterStatus {
+export const enum BoosterStatus {
 	Started,
 	Stopped,
 }

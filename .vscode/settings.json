@@ -1,0 +1,17 @@
+{
+	"[typescript][json]": {
+		"editor.defaultFormatter": "dprint.dprint"
+	},
+	"cSpell.words": [
+		"colorette",
+		"cozyhive",
+		"denolint",
+		"dprint"
+	],
+	"editor.defaultFormatter": "dprint.dprint",
+	"eslint.enable": false,
+	"prettier.enable": false,
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.importModuleSpecifierEnding": "js",
+	"typescript.preferences.includePackageJsonAutoImports": "on"
+}
