@@ -11,7 +11,7 @@ import {
 	USER_ID_REGEX,
 } from "#utils/constants.js";
 import { guilds } from "#utils/guilds.js";
-import { info } from '#utils/logger.js';
+import { info } from "#utils/logger.js";
 import { type Client, GatewayDispatchEvents, type Snowflake } from "@discordjs/core";
 import assert, { AssertionError } from "node:assert";
 
