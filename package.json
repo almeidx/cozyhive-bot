@@ -73,7 +73,7 @@
 		"vue-eslint-parser": "npm:@almeidx/empty@1.0.1"
 	},
 	"dependencies": {
-		"discord.js": "^14.12.1"
+		"discord.js": "^14.13.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.5.0",
