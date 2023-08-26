@@ -17,10 +17,7 @@ import assert, { AssertionError } from "node:assert";
 
 export function registerMessageCreateListener(client: Client) {
 	client.on(GatewayDispatchEvents.MessageCreate, async ({ api, data }) => {
-		if (
-			!data.guild_id
-			|| !OFFICIAL_GUILDS.includes(data.guild_id)
-		) {
+		if (!data.guild_id || !OFFICIAL_GUILDS.includes(data.guild_id)) {
 			return;
 		}
 

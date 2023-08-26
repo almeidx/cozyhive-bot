@@ -2,12 +2,7 @@
 	"[typescript][json]": {
 		"editor.defaultFormatter": "dprint.dprint"
 	},
-	"cSpell.words": [
-		"colorette",
-		"cozyhive",
-		"denolint",
-		"dprint"
-	],
+	"cSpell.words": ["colorette", "cozyhive", "dprint"],
 	"editor.defaultFormatter": "dprint.dprint",
 	"eslint.enable": false,
 	"prettier.enable": false,
