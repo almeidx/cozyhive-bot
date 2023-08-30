@@ -4,7 +4,7 @@
 	"indentWidth": 2,
 	"lineWidth": 120,
 	"newLineKind": "lf",
-	"includes": ["**/*.{ts,js,json,md}"],
+	"includes": ["**/*.{ts,cts,mts,js,cjs,mjs,json,md}"],
 	"excludes": ["dist/*", "node_modules/*", "pnpm-lock.yaml"],
 	"plugins": [
 		"https://plugins.dprint.dev/typescript-0.86.2.wasm",

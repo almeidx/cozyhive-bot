@@ -29,15 +29,18 @@ Note: If you don't have corepack enabled, you can do it with `corepack enable`.
 
 #### Running the bot locally
 
-If your environment variables are stored on the .env file, you can use:
-
 - `pnpm build`
-- `pnpm start:env`
 
-Otherwise, use:
+Then:
 
-- `pnpm build`
-- `pnpm start`
+- if you're using pm2, you can use:
+  - `pm2 start ecosystem.config.cjs`
+
+- if your environment variables are stored on the .env file, you can use:
+  - `pnpm start:env`
+
+- otherwise, use:
+  - `pnpm start`
 
 ---
 
