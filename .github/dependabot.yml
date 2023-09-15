@@ -5,7 +5,16 @@ updates:
     directory: /
     schedule:
       interval: daily
-    open-pull-requests-limit: 15
+    groups:
+      non-major:
+        update-types:
+          - minor
+          - patch
+      discordjs:
+        patterns:
+          - "@discordjs/*"
+        update-types:
+          - major
 
   - package-ecosystem: github-actions
     directory: /
