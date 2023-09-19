@@ -17,7 +17,7 @@ This repository houses the source code for the [Cozyhive] Discord bot, which has
 
 ### Local setup
 
-This setup assumes you have [Git], and [Node.js] setup on your machine. This repository requires [Node.js] version 18 or higher, and uses the [pnpm] package manager, so you should have basic knowledge about how to use them.
+This setup assumes you have [Git], and [Node.js] setup on your machine. This repository requires [Node.js] version 20 or higher, and uses the [pnpm] package manager, so you should have basic knowledge about how to use them.
 
 #### Cloning repository
 
