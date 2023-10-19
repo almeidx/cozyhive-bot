@@ -1,9 +1,9 @@
+import { setInterval } from "node:timers";
+import { type Client, GatewayDispatchEvents } from "@discordjs/core";
 import { noop } from "#utils/common.js";
 import { Channels, Guilds, OFFICIAL_GUILDS, Time } from "#utils/constants.js";
 import { guilds } from "#utils/guilds.js";
 import { info, warn } from "#utils/logger.js";
-import { type Client, GatewayDispatchEvents } from "@discordjs/core";
-import { setInterval } from "node:timers";
 
 export function registerReadyListener(client: Client): void {
 	client.once(GatewayDispatchEvents.Ready, ({ data }) => {

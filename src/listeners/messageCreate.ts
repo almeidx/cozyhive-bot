@@ -1,3 +1,5 @@
+import assert, { AssertionError } from "node:assert";
+import { type Client, GatewayDispatchEvents, type Snowflake } from "@discordjs/core";
 import { alertChannels } from "#utils/channels.js";
 import { noop } from "#utils/common.js";
 import {
@@ -12,8 +14,6 @@ import {
 } from "#utils/constants.js";
 import { guilds } from "#utils/guilds.js";
 import { info } from "#utils/logger.js";
-import { type Client, GatewayDispatchEvents, type Snowflake } from "@discordjs/core";
-import assert, { AssertionError } from "node:assert";
 
 export function registerMessageCreateListener(client: Client) {
 	client.on(GatewayDispatchEvents.MessageCreate, async ({ api, data }) => {
