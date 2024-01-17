@@ -1,3 +1,5 @@
+import assert, { AssertionError } from "node:assert";
+import { type Client, GatewayDispatchEvents, type Snowflake } from "@discordjs/core";
 import { alertChannels } from "#utils/channels.js";
 import { noop } from "#utils/common.js";
 import {
@@ -12,8 +14,6 @@ import {
 } from "#utils/constants.js";
 import { guilds } from "#utils/guilds.js";
 import { info } from "#utils/logger.js";
-import { type Client, GatewayDispatchEvents, type Snowflake } from "@discordjs/core";
-import assert, { AssertionError } from "node:assert";
 
 export function registerMessageCreateListener(client: Client) {
 	client.on(GatewayDispatchEvents.MessageCreate, async ({ api, data }) => {
@@ -23,9 +23,9 @@ export function registerMessageCreateListener(client: Client) {
 
 		const alertsChannelId = alertChannels.get(data.guild_id);
 		if (
-			data.author.id !== NIGHTHAWK_BOT_USER_ID
-			|| (alertsChannelId && data.channel_id !== alertsChannelId)
-			|| (!data.content.includes("New Booster") && !data.content.includes("Stopped Boosting"))
+			data.author.id !== NIGHTHAWK_BOT_USER_ID ||
+			(alertsChannelId && data.channel_id !== alertsChannelId) ||
+			(!data.content.includes("New Booster") && !data.content.includes("Stopped Boosting"))
 		) {
 			return;
 		}
@@ -41,8 +41,8 @@ export function registerMessageCreateListener(client: Client) {
 			const boosterStatus = data.content.startsWith("New Booster")
 				? BoosterStatus.Started
 				: data.content.startsWith("Stopped Boosting")
-				? BoosterStatus.Stopped
-				: null;
+				  ? BoosterStatus.Stopped
+				  : null;
 			assert(boosterStatus !== null, "Could not determine if the message was a new booster or a stopped booster");
 
 			const fetchedMember = await api.guilds.getMember(Guilds.Cozyhive, userId).catch(noop);
@@ -57,8 +57,7 @@ export function registerMessageCreateListener(client: Client) {
 
 				await api.channels
 					.createMessage(Channels.NitroBoosters, {
-						content:
-							`${Emojis.NitroBoostHover} <@${userId}> just ascended and boosted the **${guild.name}** server! Well done, now make sure to check out <#${Channels.ColourRoles}>!`,
+						content: `${Emojis.NitroBoostHover} <@${userId}> just ascended and boosted the **${guild.name}** server! Well done, now make sure to check out <#${Channels.ColourRoles}>!`,
 					})
 					.catch(noop);
 

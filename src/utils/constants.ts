@@ -53,8 +53,8 @@ export const NIGHTHAWK_BOT_USER_ID = "740892250820706345";
 export const USER_ID_REGEX = /User: (\d{16,20})$/;
 
 export const enum BoosterStatus {
-	Started,
-	Stopped,
+	Started = 0,
+	Stopped = 1,
 }
 
 export const enum Time {

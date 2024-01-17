@@ -1,7 +1,6 @@
+import assert from "node:assert";
 import { env } from "node:process";
 
-if (!env.DISCORD_TOKEN) {
-	throw new Error("DISCORD_TOKEN environment variable is required");
-}
+assert(typeof env.DISCORD_TOKEN === "string", "DISCORD_TOKEN must be set");
 
 export const DISCORD_TOKEN = env.DISCORD_TOKEN;
