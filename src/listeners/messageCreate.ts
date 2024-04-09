@@ -41,8 +41,8 @@ export function registerMessageCreateListener(client: Client) {
 			const boosterStatus = data.content.startsWith("New Booster")
 				? BoosterStatus.Started
 				: data.content.startsWith("Stopped Boosting")
-				  ? BoosterStatus.Stopped
-				  : null;
+					? BoosterStatus.Stopped
+					: null;
 			assert(boosterStatus !== null, "Could not determine if the message was a new booster or a stopped booster");
 
 			const fetchedMember = await api.guilds.getMember(Guilds.Cozyhive, userId).catch(noop);

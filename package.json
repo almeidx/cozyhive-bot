@@ -28,12 +28,12 @@
 		"colorette": "^2.0.20"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.6.1",
-		"@types/node": "^20.11.30",
+		"@biomejs/biome": "^1.6.4",
+		"@types/node": "^20.12.6",
 		"esbuild": "^0.20.2",
-		"typescript": "~5.4.3"
+		"typescript": "~5.4.4"
 	},
-	"packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2",
+	"packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f",
 	"engines": {
 		"node": "20"
 	}
