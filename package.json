@@ -28,7 +28,7 @@
 		"colorette": "^2.0.20"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.7.0",
+		"@biomejs/biome": "^1.7.2",
 		"@types/node": "^20.12.7",
 		"esbuild": "^0.20.2",
 		"typescript": "~5.4.5"
