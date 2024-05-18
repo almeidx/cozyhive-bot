@@ -30,10 +30,10 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.7.3",
 		"@types/node": "^20.12.12",
-		"esbuild": "^0.21.2",
+		"esbuild": "^0.21.3",
 		"typescript": "~5.4.5"
 	},
-	"packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f",
+	"packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b",
 	"engines": {
 		"node": "20"
 	}
