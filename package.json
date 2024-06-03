@@ -24,12 +24,12 @@
 	"dependencies": {
 		"@discordjs/core": "^1.2.0",
 		"@discordjs/rest": "^2.3.0",
-		"@discordjs/ws": "^1.1.0",
+		"@discordjs/ws": "^1.1.1",
 		"colorette": "^2.0.20"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.7.3",
-		"@types/node": "^20.12.13",
+		"@types/node": "^20.14.0",
 		"esbuild": "^0.21.4",
 		"typescript": "~5.4.5"
 	},
