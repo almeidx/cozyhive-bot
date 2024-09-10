@@ -1,7 +1,7 @@
 import assert, { AssertionError } from "node:assert";
 import { type Client, GatewayDispatchEvents, type Snowflake } from "@discordjs/core";
-import { alertChannels } from "#utils/channels.js";
-import { noop } from "#utils/common.js";
+import { alertChannels } from "#utils/channels.ts";
+import { noop } from "#utils/common.ts";
 import {
 	BoosterStatus,
 	Channels,
@@ -11,9 +11,9 @@ import {
 	OFFICIAL_GUILDS,
 	Roles,
 	USER_ID_REGEX,
-} from "#utils/constants.js";
-import { guilds } from "#utils/guilds.js";
-import { info } from "#utils/logger.js";
+} from "#utils/constants.ts";
+import { guilds } from "#utils/guilds.ts";
+import { info } from "#utils/logger.ts";
 
 export function registerMessageCreateListener(client: Client) {
 	client.on(GatewayDispatchEvents.MessageCreate, async ({ api, data }) => {

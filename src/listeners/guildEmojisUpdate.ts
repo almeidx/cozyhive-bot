@@ -1,5 +1,5 @@
 import { type Client, GatewayDispatchEvents } from "@discordjs/core";
-import { guilds } from "#utils/guilds.js";
+import { guilds } from "#utils/guilds.ts";
 
 export function registerGuildEmojisUpdateListener(client: Client) {
 	client.on(GatewayDispatchEvents.GuildEmojisUpdate, ({ data }) => {

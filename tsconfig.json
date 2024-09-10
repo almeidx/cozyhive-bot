@@ -1,43 +1,17 @@
 {
+	"extends": ["@tsconfig/node22/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
 	"compilerOptions": {
-		// Type Checking
-		"allowUnreachableCode": false,
-		"allowUnusedLabels": false,
-		"exactOptionalPropertyTypes": true,
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"strict": true,
-		"useUnknownInCatchVariables": true,
-		"noUncheckedIndexedAccess": true,
-
-		// Modules
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"resolveJsonModule": true,
-		"verbatimModuleSyntax": true,
-
-		// Emit
-		"importHelpers": true,
-		"inlineSources": true,
-		"newLine": "lf",
-		"noEmitHelpers": true,
-		"outDir": "dist",
-		"removeComments": true,
-		"sourceMap": true,
-		"esModuleInterop": true,
-
-		// Language and Environment
-		"lib": ["ESNext"],
-		"target": "ES2022",
-		"skipLibCheck": true,
-		"useDefineForClassFields": true,
-
+		"allowImportingTsExtensions": true,
+		"checkJs": false,
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"noEmit": true,
+		"noPropertyAccessFromIndexSignature": false,
+		"noUncheckedSideEffectImports": true,
 		"paths": {
 			"#listeners/*": ["./src/listeners/*"],
 			"#utils/*": ["./src/utils/*"]
-		}
+		},
+		"resolveJsonModule": true
 	}
 }

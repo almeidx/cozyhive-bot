@@ -1,7 +1,7 @@
 import { type Client, GatewayDispatchEvents } from "@discordjs/core";
-import { alertChannels } from "#utils/channels.js";
-import { ALERTS_CHANNEL_NAME, OFFICIAL_GUILDS } from "#utils/constants.js";
-import { guilds } from "#utils/guilds.js";
+import { alertChannels } from "#utils/channels.ts";
+import { ALERTS_CHANNEL_NAME, OFFICIAL_GUILDS } from "#utils/constants.ts";
+import { guilds } from "#utils/guilds.ts";
 
 export function registerGuildCreateListener(client: Client) {
 	client.on(GatewayDispatchEvents.GuildCreate, ({ data }) => {

@@ -3,38 +3,32 @@
 	"private": true,
 	"repository": "https://github.com/almeidx/cozyhive-bot",
 	"license": "GPL-3.0",
-	"author": "Almeida <almeidx@pm.me> (https://almeidx.dev)",
+	"author": "Almeida <contact@almeidx.dev> (almeidx.dev)",
 	"type": "module",
 	"imports": {
-		"#listeners/*": "./dist/listeners/*",
-		"#utils/*": "./dist/utils/*"
+		"#listeners/*": "./src/listeners/*",
+		"#utils/*": "./src/utils/*"
 	},
 	"scripts": {
-		"build": "pnpm build:check && pnpm build:write",
-		"build:check": "tsc --noEmit",
-		"build:clean": "node -e \"require('fs').rmSync('dist', { force: true, recursive: true })\"",
-		"build:write": "pnpm build:clean && esbuild \"src/**/*.ts\" --outdir=dist --platform=node --target=node20 --format=esm --sourcemap",
-		"fmt": "pnpm format",
-		"format": "biome check --apply .",
-		"lint": "biome check .",
-		"start": "node --enable-source-maps dist/index.js",
-		"start-dev": "pnpm build:write && node --enable-source-maps --env-file=.env dist/index.js",
-		"start:env": "node --enable-source-maps --env-file=.env dist/index.js"
+		"build": "tsc",
+		"fmt": "biome check --write",
+		"lint": "biome check",
+		"start": "node --env-file=.env src/index.ts"
 	},
 	"dependencies": {
-		"@discordjs/core": "^1.2.0",
-		"@discordjs/rest": "^2.3.0",
-		"@discordjs/ws": "^1.1.1",
-		"colorette": "^2.0.20"
+		"@discordjs/core": "^2.0.0",
+		"@discordjs/rest": "^2.4.0",
+		"@discordjs/ws": "^2.0.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
-		"@types/node": "^20.14.9",
-		"esbuild": "^0.23.0",
-		"typescript": "~5.5.3"
+		"@tsconfig/node22": "^22.0.0",
+		"@tsconfig/strictest": "^2.0.5",
+		"@types/node": "^22.5.4",
+		"typescript": "~5.6.2"
 	},
-	"packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b",
+	"packageManager": "pnpm@9.10.0",
 	"engines": {
-		"node": "20"
+		"node": "22"
 	}
 }

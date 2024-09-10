@@ -1,9 +1,9 @@
-import { cyan, gray, red, yellow } from "colorette";
+import { styleText } from "node:util";
 
 const logPrefix = "LOG";
-const errorPrefix = red("ERROR");
-const infoPrefix = cyan("INFO");
-const warnPrefix = yellow("WARN");
+const errorPrefix = styleText("red", "ERROR");
+const infoPrefix = styleText("cyan", "INFO");
+const warnPrefix = styleText("yellow", "WARN");
 
 export function log(message: any, ...extra: any[]) {
 	console.log(prefix(message, logPrefix), ...extra);
@@ -22,14 +22,14 @@ export function warn(message: any, ...extra: any[]) {
 }
 
 function prefix(message: any, type: string) {
-	return `${gray(formatDate(new Date()))} [${type}] ${message}`;
+	return `${styleText("gray", formatDate(new Date()))} [${type}] ${message}`;
 }
 
 function formatDate(date: Date) {
-	const datePart = `${date.getFullYear()}-${padNumber(date.getMonth() + 1)}-${padNumber(date.getDate())}`;
-	const hourPart = `${padNumber(date.getHours())}:${padNumber(date.getMinutes())}:${padNumber(date.getSeconds())}`;
-
-	return `${datePart} ${hourPart}`;
+	return (
+		`${date.getFullYear()}-${padNumber(date.getMonth() + 1)}-${padNumber(date.getDate())} ` +
+		`${padNumber(date.getHours())}:${padNumber(date.getMinutes())}:${padNumber(date.getSeconds())}`
+	);
 }
 
 function padNumber(num: number) {
